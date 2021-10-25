@@ -1,0 +1,23 @@
+title: GetUser
+type: object
+description: ''
+properties:
+  requestId:
+    type: string
+  timestamp:
+    type: string
+  data:
+    type: array
+    items:
+      $ref: ./User.yaml
+examples:
+  - requestId: 0f616f73-6920-4fc8-b77d-d2912ae86c8c
+    timestamp: '2021-10-25T12:07:30.7398647-06:00'
+    data:
+      - id: 142
+        firstName: Alice
+        lastName: Smith
+        email: alice.smith@gmail.com
+        dateOfBirth: '1997-10-31'
+        emailVerified: true
+        signUpDate: '2019-08-24'
