@@ -42,6 +42,10 @@ paths:
                         signUpDate: '2019-08-24'
         '404':
           description: User Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ./models/ProblemMessage.json
       operationId: get-users-userId
       description: Retrieve the information of the user with the matching user ID.
   /user:
