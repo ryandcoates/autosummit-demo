@@ -1,6 +1,7 @@
 apiDefinitions:
   demoapi1: ./docs/demoapi1.yaml
   demoapi2: ./docs/demoapi2.yaml
+  demoapi3: ./docs/demoapi3.yaml
 
 lint:
   extends:
