@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: AutoSummit Demo API 1
+  title: AutoSummit Demo API 2
   version: "2021-11-2"
 servers:
   - url: "http://localhost:3000"

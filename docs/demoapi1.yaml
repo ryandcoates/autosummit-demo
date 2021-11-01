@@ -1,15 +1,15 @@
 openapi: 3.1.0
 info:
-  title: demoapi1
-  version: '1.0'
+  title: AutoSummit Demo API 1
+  version: "1.0"
   contact:
     name: Amy Admin
     email: amy@email.com
   description: This is a demo api for Automation Summit presentation
 servers:
-  - url: 'http://localhost:3000'
+  - url: "http://localhost:3000"
 paths:
-  '/users/{userId}':
+  "/users/{userId}":
     parameters:
       - schema:
           type: integer
@@ -21,7 +21,7 @@ paths:
       summary: Get User Info by User ID
       tags: []
       responses:
-        '200':
+        "200":
           description: User Found
           content:
             application/json:
@@ -31,19 +31,19 @@ paths:
                 Get User Alice Smith:
                   value:
                     requestId: 0f616f73-6920-4fc8-b77d-d2912ae86c8c
-                    timestamp: '2021-10-25T12:07:30.7398647-06:00'
+                    timestamp: "2021-10-25T12:07:30.7398647-06:00"
                     data:
                       - id: 142
                         firstName: Alice
                         lastName: Smith
                         email: alice.smith@gmail.com
-                        dateOfBirth: '1997-10-31'
+                        dateOfBirth: "1997-10-31"
                         emailVerified: true
-                        signUpDate: '2019-08-24'
-        '404':
+                        signUpDate: "2019-08-24"
+        "404":
           description: User Not Found
           content:
-            application/json:
+            application/problem+json:
               schema:
                 $ref: ./models/ProblemMessage.json
       operationId: get-users-userId
@@ -53,12 +53,12 @@ paths:
       summary: Create New User
       operationId: post-user
       responses:
-        '200':
+        "200":
           description: User Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: "#/components/schemas/User"
               examples:
                 New User Bob Fellow:
                   value:
@@ -66,12 +66,12 @@ paths:
                     firstName: Bob
                     lastName: Fellow
                     email: bob.fellow@gmail.com
-                    dateOfBirth: '1996-08-24'
+                    dateOfBirth: "1996-08-24"
                     emailVerified: false
-                    createDate: '2020-11-18'
-        '400':
+                    createDate: "2020-11-18"
+        "400":
           description: Missing Required Information
-        '409':
+        "409":
           description: Email Already Taken
       requestBody:
         content:
@@ -99,7 +99,7 @@ paths:
                   firstName: Bob
                   lastName: Fellow
                   email: bob.fellow@gmail.com
-                  dateOfBirth: '1996-08-24'
+                  dateOfBirth: "1996-08-24"
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
 components:
@@ -107,15 +107,15 @@ components:
     User:
       title: User
       type: object
-      description: ''
+      description: ""
       examples:
         - id: 142
           firstName: Alice
           lastName: Smith
           email: alice.smith@gmail.com
-          dateOfBirth: '1997-10-31'
+          dateOfBirth: "1997-10-31"
           emailVerified: true
-          signUpDate: '2019-08-24'
+          signUpDate: "2019-08-24"
       properties:
         id:
           type: integer
@@ -130,7 +130,7 @@ components:
         dateOfBirth:
           type: string
           format: date
-          example: '1997-10-31'
+          example: "1997-10-31"
         emailVerified:
           type: boolean
           description: Set to true if the user's email has been verified.
