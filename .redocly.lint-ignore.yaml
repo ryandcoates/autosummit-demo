@@ -1,0 +1,15 @@
+# This file instructs Redocly's linter to ignore the rules contained for specific parts of your API.
+# See https://redoc.ly/docs/cli/ for more information.
+docs\demoapi1.yaml:
+  info-license:
+    - '#/info'
+docs\models\ProblemMessage.json:
+  spec:
+    - '#/id'
+    - '#/$schema'
+    - '#/definitions'
+docs\demoapi2.yaml:
+  info-description:
+    - '#/info/description'
+  info-license:
+    - '#/info'

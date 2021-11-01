@@ -1,0 +1,16 @@
+apiDefinitions:
+  demoapi1: ./docs/demoapi1.yaml
+  demoapi2: ./docs/demoapi2.yaml
+
+lint:
+  extends:
+    - recommended
+
+referenceDocs:
+  showConsole: true
+  generateCodeSamples:
+    languages:
+      - lang: Python
+      - lang: C#
+      - lang: Node.js
+      - lang: Go
